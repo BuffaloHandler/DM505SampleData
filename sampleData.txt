@@ -46,3 +46,16 @@ VALUES (2001, 2.00, 2048, 240, 20.1, 3673), (2002, 1.73, 1024, 80, 17.0, 949),
         (2005, 2.16, 1024, 120, 17.0, 2500), (2006, 2.00, 2048, 80, 15.4, 1700),
         (2007, 1.83, 1024, 120, 13.3, 1429), (2008, 1.60, 1024, 100, 15.4, 900),
         (2009, 1.60, 512, 80, 14.1, 680), (2010, 2.00, 2048, 160, 15.4, 2300);
+
+CREATE TABLE Printer (
+  model INT,
+  color BOOL,
+  type VARCHAR,
+  price FLOAT,
+  PRIMARY KEY(model)
+);
+
+INSERT INTO Printer (model, color, type, price)
+VALUES (3001, TRUE, 'ink-jet', 99), (3002, FALSE, 'laser', 239), (3003, TRUE, 'laser', 899),
+        (3004, TRUE, 'ink-jet', 120), (3005, FALSE, 'laser', 120), (3006, TRUE, 'ink-jet', 100),
+        (3007, TRUE, 'laser', 200);
