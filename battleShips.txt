@@ -11,7 +11,7 @@ CREATE TABLE Classes (
 INSERT INTO Classes (class, type, country, numGuns, bore, displacement)
 VALUES ('Bismarck', 'bb', 'Germany', 8, 15, 42000), ('Iowa', 'bb', 'USA', 9, 16, 46000), ('Kongo', 'be', 'Japan', 8, 14, 32000),
         ('North Carolina', 'bb', 'USA', 9, 16, 37000), ('Renown', 'be', 'Gt. Britain', 6, 15, 32000),
-        ('Revenge', 'bb' 'Gt. Britain', 8, 15, 29000), ('Tennessee', 'bb', 'USA', 12, 14, 32000),
+        ('Revenge', 'bb', 'Gt. Britain', 8, 15, 29000), ('Tennessee', 'bb', 'USA', 12, 14, 32000),
         ('Yamato', 'bb', 'Japan', 9, 18, 65000);
 
 CREATE TABLE Battles (
@@ -30,9 +30,9 @@ CREATE TABLE Outcomes (
   PRIMARY KEY(ship, battle)
 );
 
-INSERT INTO Outcomes (name, class, launched)
-VALUES ('Arizona', 'Pearl Harbor', sunk), ('Bismarck', 'Denmark Strait', 'sunk'), ('California', 'Surigao Strait', 'ok'),
-        ('Duke of York', 'North Cape', 'ok'), ('Fuso', 'Surigao Strait', 'sunk'), ('Hood', 'Denmark Strait', 'sunk')
+INSERT INTO Outcomes (ship, battle, result)
+VALUES ('Arizona', 'Pearl Harbor', 'sunk'), ('Bismarck', 'Denmark Strait', 'sunk'), ('California', 'Surigao Strait', 'ok'),
+        ('Duke of York', 'North Cape', 'ok'), ('Fuso', 'Surigao Strait', 'sunk'), ('Hood', 'Denmark Strait', 'sunk'),
         ('King George V', 'Denmark Strait', 'ok'), ('Kirishima', 'Guadalcanal', 'sunk'), ('Prince of Wales', 'Denmark Strait', 'damaged'),
         ('Rodney', 'Denmark Strait', 'ok'), ('Scharnhorst', 'North Cape', 'sunk'), ('South Dakota', 'Guadalcanal', 'damaged'),
         ('Tennessee', 'Surigao Strait', 'ok'), ('Washington', 'Guadalcanal', 'ok'), ('West Virginia', 'Surigao Strait', 'ok'),
@@ -41,7 +41,7 @@ VALUES ('Arizona', 'Pearl Harbor', sunk), ('Bismarck', 'Denmark Strait', 'sunk')
 CREATE TABLE Ships (
   name VARCHAR,
   class VARCHAR,
-  launched YEAR,
+  launched INT,
   PRIMARY KEY(name)
 );
 
@@ -52,5 +52,3 @@ VALUES ('California', 'Tennessee', 1921), ('Haruna', 'Kongo', 1915), ('Hiei', 'K
         ('Renown', 'Renown', 1916), ('Repulse', 'Renown', 1916), ('Resolution', 'Revenge', 1916), ('Revenge', 'Revenge', 1916),
         ('Royal Oak', 'Revenge', 1916), ('Royal Sovereign', 'Revenge', 1916), ('Tennessee', 'Tennessee', 1920),
         ('Washington', 'North Carolina', 1941), ('Wisconsin', 'Iowa', 1944), ('Yamato', 'Yamato', 1941);
-
-
